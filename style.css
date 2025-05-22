@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #1c1c1c; /* dark background for glow contrast */
+}
+
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Card base style */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Specific card sizes and stacking */
+#card1 {
+    height: 350px;
+    width: 250px;
+    z-index: 4;
+    rotate: -8deg;
+}
+
+#card2 {
+    height: 340px;
+    width: 240px;
+    z-index: 3;
+    rotate: -16deg;
+}
+
+#card3 {
+    height: 330px;
+    width: 230px;
+    z-index: 2;
+    rotate: -24deg;
+}
+
+#card4 {
+    height: 320px;
+    width: 220px;
+    z-index: 1;
+    rotate: -32deg;
+}
+
+/* Hover animation and glow effect */
+.card:hover {
+    transform: translate(-50%, -50%) scale(1.05) rotate(0deg);
+    box-shadow: 0 0 30px 10px rgba(255, 255, 0, 0.7); /* yellow glow */
+    z-index: 5; /* Bring hovered card to front */
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokemon Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main">
+    <div id="card1" class="card">
+      <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM1/SM1_EN_1.png" alt="Pokemon Card 1" />
+    </div>
+    <div id="card2" class="card">
+      <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM12/SM12_EN_65.png" alt="Pokemon Card 2" />
+    </div>
+    <div id="card3" class="card">
+      <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM12/SM12_EN_12.png" alt="Pokemon Card 3" />
+    </div>
+    <div id="card4" class="card">
+      <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH3/SWSH3_EN_19.png" alt="Pokemon Card 4" />
+    </div>
+  </div>
+
+  <!-- JavaScript to bring clicked card to front -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    let zIndexCounter = 10;
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.style.zIndex = zIndexCounter++;
+      });
+    });
+  </script>
+</body>
+</html>
